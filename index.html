@@ -262,40 +262,42 @@
                 <h2 class="text-3xl md:text-5xl font-bold italic text-stone-900 uppercase tracking-tight">Programa de Inicio & Clases</h2>
                 <div class="w-20 h-px bg-cyan-700 mx-auto my-6"></div>
                 <p class="text-stone-600 text-sm italic max-w-2xl mx-auto">
-                    Para ingresar a las clases grupales, realizamos primero el Módulo de Aprendizaje Intensivo de 2 horas. Te incorporás de manera segura con todas las bases aprendidas.
+                    Para sumarte a las clases grupales, realizamos primero un Taller Introductorio especial de aproximadamente hora y media. Aprendés las bases posturales y respiratorias para incorporarte con total confianza.
                 </p>
             </div>
 
             <!-- Grilla de Opciones de Reserva -->
             <div class="grid md:grid-cols-2 gap-8 mb-16">
                 
-                <!-- Opción 1: Programa de Inicio -->
+                <!-- Opción 1: Programa de Inicio Completo -->
                 <div class="bg-white border-2 border-cyan-600 p-8 flex flex-col justify-between relative shadow-xl">
                     <div class="absolute top-0 right-0 bg-cyan-700 text-white text-[9px] uppercase font-bold tracking-widest px-4 py-1 italic">
-                        Recomendado / Ingreso
+                        Recomendado / Nuevas Alumnas
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-stone-900 uppercase italic mb-2">Programa de Inicio Completo</h3>
-                        <p class="text-xs text-stone-500 italic mb-6">Módulo Intensivo (2hs) + 1° Mes de Práctica Grupal</p>
+                        <p class="text-xs text-stone-500 italic mb-6">Taller Introductorio (9:00 hs) + 1° Mes de Prácticas (11:00 hs)</p>
                         
-                        <div class="text-4xl font-bold text-cyan-800 mb-6 italic">$60.000.-</div>
+                        <div class="text-4xl font-bold text-cyan-800 mb-2 italic">$80.000.-</div>
+                        <p class="text-[10px] text-stone-400 uppercase font-bold tracking-widest italic mb-6">($20.000 Taller de Inicio + $60.000 Mes de Práctica)</p>
                         
                         <ul class="text-xs text-stone-600 space-y-3 mb-8 italic border-t border-stone-200 pt-6">
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Módulo Intensivo de Aprendizaje (Sábados 9:00 hs)</span></li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Enseñanza técnica paso a paso y corrección postural</span></li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Incorporación inmediata a la clase práctica (Sábados 11:00 hs)</span></li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Material de apoyo + Seguimiento personalizado</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-star text-cyan-600 text-[10px]"></i> <span><strong>Próxima Fecha de Inicio: Sábado 5 de Septiembre - 9:00 hs</strong></span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Taller Introductorio de inicio (se dicta 1 vez al mes para nuevos grupos)</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Integración inmediata a la clase de las 11:00 hs ese mismo día</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Incluye las 4 clases prácticas semanales del mes (Sábados 11:00 hs)</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-600 text-[10px]"></i> <span>Duración fluida y respetuosa de aprox. 1h 30m adaptada al grupo</span></li>
                         </ul>
                     </div>
 
                     <div>
-                        <label class="block text-[10px] uppercase font-bold text-stone-500 mb-2 italic">Seleccionar Modalidad:</label>
+                        <label class="block text-[10px] uppercase font-bold text-stone-500 mb-2 italic">Seleccionar Modalidad de Inicio:</label>
                         <select id="modalidad-inicio" class="w-full bg-stone-50 text-stone-800 text-xs p-3 border border-stone-300 rounded-sm focus:outline-none focus:border-cyan-600 mb-6 italic">
-                            <option value="Programa de Inicio Completo (Sábados 9:00 hs + Práctica 11:00 hs)">Sábados 9:00 hs (Inicio Intensivo) — $60.000</option>
+                            <option value="Programa de Inicio Completo (Sábado 5 de Septiembre 9:00 hs + Prácticas 11:00 hs)">Sábado 5 de Septiembre 9:00 hs — $80.000 ($20k Taller + $60k Mes)</option>
                         </select>
 
-                        <button onclick="solicitarReservaHipopresivos('Programa de Inicio', 'modalidad-inicio', '60.000')" class="w-full bg-cyan-700 hover:bg-cyan-800 text-white py-4 text-[10px] font-bold uppercase tracking-widest transition italic text-center shadow-md">
-                            Reservar Programa de Inicio
+                        <button onclick="solicitarReservaHipopresivos('Programa de Inicio Completo (Sábado 5 de Septiembre)', 'modalidad-inicio', '80.000')" class="w-full bg-cyan-700 hover:bg-cyan-800 text-white py-4 text-[10px] font-bold uppercase tracking-widest transition italic text-center shadow-md">
+                            Reservar Taller de Inicio + Mes
                         </button>
                     </div>
                 </div>
@@ -304,25 +306,26 @@
                 <div class="bg-white border border-stone-300 p-8 flex flex-col justify-between shadow-xl">
                     <div>
                         <h3 class="text-xl font-bold text-stone-900 uppercase italic mb-2">Suscripción Mensual Regular</h3>
-                        <p class="text-xs text-stone-500 italic mb-6">Para alumnas con Módulo de Inicio Aprobado</p>
+                        <p class="text-xs text-stone-500 italic mb-6">Exclusivo para alumnas que ya realizaron la clase introductoria</p>
                         
-                        <div class="text-4xl font-bold text-stone-900 mb-6 italic">$60.000.-</div>
+                        <div class="text-4xl font-bold text-stone-900 mb-2 italic">$60.000.-</div>
+                        <p class="text-[10px] text-stone-400 uppercase font-bold tracking-widest italic mb-6">(Abono Mensual de Prácticas Continuas)</p>
                         
                         <ul class="text-xs text-stone-600 space-y-3 mb-8 italic border-t border-stone-200 pt-6">
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>Clases semanales de práctica (Sábados 11:00 hs)</span></li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>Evolución progresiva de posturas y apneas</span></li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>Grupos reducidos para supervisión constante</span></li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>Reserva de plaza fija mensual en Espacio INYO</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>4 Clases semanales de práctica grupal (Sábados 11:00 hs)</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>Evolución progresiva de posturas, ritmo y apneas</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>Grupos reducidos para supervisión constante e individualizada</span></li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-stone-400 text-[10px]"></i> <span>Reserva de plaza fija mensual garantizada en Espacio INYO</span></li>
                         </ul>
                     </div>
 
                     <div>
                         <label class="block text-[10px] uppercase font-bold text-stone-500 mb-2 italic">Seleccionar Horario Fijo:</label>
                         <select id="modalidad-mensual" class="w-full bg-stone-50 text-stone-800 text-xs p-3 border border-stone-300 rounded-sm focus:outline-none focus:border-cyan-600 mb-6 italic">
-                            <option value="Suscripción Mensual Regular (Sábados 11:00 hs)">Sábados 11:00 hs (Clase de Práctica) — $60.000</option>
+                            <option value="Suscripción Mensual Regular (Sábados 11:00 hs)">Sábados 11:00 hs (Clases de Práctica) — $60.000</option>
                         </select>
 
-                        <button onclick="solicitarReservaHipopresivos('Suscripción Mensual', 'modalidad-mensual', '60.000')" class="w-full bg-stone-900 hover:bg-stone-800 text-white py-4 text-[10px] font-bold uppercase tracking-widest transition italic text-center">
+                        <button onclick="solicitarReservaHipopresivos('Suscripción Mensual Regular', 'modalidad-mensual', '60.000')" class="w-full bg-stone-900 hover:bg-stone-800 text-white py-4 text-[10px] font-bold uppercase tracking-widest transition italic text-center">
                             Reservar Plaza Mensual
                         </button>
                     </div>
@@ -352,17 +355,17 @@
                         <i class="fas fa-chevron-down arrow-icon text-stone-400 transition-transform"></i>
                     </div>
                     <div class="accordion-body text-sm text-stone-600 italic mt-4">
-                        No. El Programa de Inicio está diseñado específicamente para aprender la técnica desde cero de forma guiada y segura.
+                        No. El Taller Introductorio de Inicio está diseñado específicamente para aprender la técnica desde cero de forma guiada, cuidada y accesible.
                     </div>
                 </div>
 
                 <div class="accordion-item border border-stone-200 bg-white p-6 rounded-sm cursor-pointer shadow-sm hover:shadow-md transition" onclick="toggleAccordion(this)">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-base font-bold text-stone-800 italic">¿Puedo incorporarme en cualquier momento del mes?</h3>
+                        <h3 class="text-base font-bold text-stone-800 italic">¿Cómo es la dinámica de inicio e incorporación?</h3>
                         <i class="fas fa-chevron-down arrow-icon text-stone-400 transition-transform"></i>
                     </div>
                     <div class="accordion-body text-sm text-stone-600 italic mt-4">
-                        Sí. Cada persona inicia realizando el Módulo de Aprendizaje Intensivo (Sábados 9:00 hs) e inmediatamente pasa a formar parte de las clases regulares de práctica.
+                        Realizamos un encuentro especial de inicio una vez al mes (próxima fecha: Sábado 5 de Septiembre a las 9:00 hs). Ese día realizás la práctica introductoria y luego te sumás a las clases regulares de las 11:00 hs.
                     </div>
                 </div>
 
