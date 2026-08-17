@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Alumnas | Hipopresivos - Espacio INYO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, .brand-font { font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        body { font-family: 'Lato', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        
+        .bg-acceso {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.90)), 
+            url('imagenes/grupo-hipopresivos.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-acceso min-h-screen flex flex-col justify-between items-center p-6 antialiased">
+
+    <!-- Header Breve -->
+    <header class="w-full max-w-md flex justify-between items-center pt-4">
+        <a href="index.html" class="text-stone-300 hover:text-white transition text-xs uppercase tracking-widest font-bold flex items-center gap-2 italic">
+            <i class="fas fa-arrow-left"></i> Volver a la web
+        </a>
+        <span class="text-[10px] text-cyan-400 uppercase tracking-widest font-bold italic">Espacio INYO ☯️</span>
+    </header>
+
+    <!-- Caja Central de Verificación -->
+    <main class="w-full max-w-md my-auto">
+        <div class="glass-card p-8 md:p-10 rounded-sm shadow-2xl text-center space-y-6">
+            
+            <div class="w-16 h-16 rounded-full bg-cyan-900/40 border border-cyan-500/30 flex items-center justify-center mx-auto text-cyan-300 text-2xl shadow-inner">
+                <i class="fas fa-lock"></i>
+            </div>
+
+            <div>
+                <p class="text-cyan-400 text-[10px] uppercase font-bold tracking-[0.4em] mb-1 italic">Área Privada</p>
+                <h1 class="text-2xl font-bold text-white uppercase italic tracking-tight">Acceso a Alumnas</h1>
+                <p class="text-stone-300 text-xs italic mt-2">Ingresá la clave provista por Espacio INYO para desbloquear el material de estudio.</p>
+            </div>
+
+            <form onsubmit="verificarClave(event)" class="space-y-4 pt-2">
+                <div>
+                    <input type="password" id="clave-input" placeholder="Ingresá tu clave aquí..." class="w-full bg-slate-900/80 text-white placeholder-stone-500 text-sm p-4 border border-stone-700 rounded-sm focus:outline-none focus:border-cyan-500 text-center tracking-widest">
+                </div>
+
+                <div id="error-msg" class="hidden text-red-400 text-xs italic font-bold bg-red-950/40 p-3 border border-red-800/50 rounded-sm">
+                    ⚠️ Clave incorrecta. Por favor volvé a intentarlo o consultanos por WhatsApp.
+                </div>
+
+                <button type="submit" class="w-full bg-cyan-700 hover:bg-cyan-800 text-white py-4 text-xs font-bold uppercase tracking-widest transition italic shadow-lg border border-cyan-500/40">
+                    Ingresar al Portal
+                </button>
+            </form>
+
+            <div class="pt-4 border-t border-white/10 text-[11px] text-stone-400 italic">
+                ¿No recordás la clave? <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Soy%20alumna%20de%20Hipopresivos%20y%20necesito%20la%20clave%20de%20acceso." target="_blank" class="text-cyan-300 underline underline-offset-4 hover:text-white">Consultar por WhatsApp</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Breve -->
+    <footer class="w-full max-w-md text-center text-stone-500 text-[10px] uppercase tracking-widest font-bold pb-4 italic">
+        © 2026 Técnicas Hipopresivas | Espacio INYO Lanús
+    </footer>
+
+    <script>
+        function verificarClave(e) {
+            e.preventDefault();
+            const input = document.getElementById('clave-input').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+
+            // Clave configurada de acceso para alumnas
+            if (input === 'HIPO2026' || input === 'hipo2026' || input === 'inyo2026') {
+                sessionStorage.setItem('alumna_hipo_auth', 'true');
+                window.location.href = 'guia-alumnas.html';
+            } else {
+                errorMsg.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
