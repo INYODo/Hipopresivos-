@@ -25,19 +25,16 @@
 </head>
 <body class="antialiased">
 
-    <!-- Verificación Básica de Sesión -->
     <script>
         if (!sessionStorage.getItem('alumna_hipo_auth')) {
             window.location.href = 'acceso.html';
         }
     </script>
 
-    <!-- Botón Flotante WhatsApp Espacio INYO -->
     <a href="https://wa.me/541176194825" target="_blank" class="fixed bottom-8 right-8 bg-[#25d366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 z-50 border border-white/20" title="Contacto Espacio INYO">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Encabezado Privado -->
     <header class="header-portal text-white py-16 px-6 text-center border-b border-cyan-900/50">
         <div class="max-w-4xl mx-auto space-y-4">
             <div class="flex justify-between items-center text-xs uppercase tracking-widest text-stone-400 italic mb-6">
@@ -52,7 +49,6 @@
         </div>
     </header>
 
-    <!-- Módulo 1: Descarga Directa del Ebook PDF -->
     <section class="py-12 px-6 bg-cyan-900/10 border-b border-stone-200">
         <div class="max-w-4xl mx-auto bg-white border-2 border-cyan-600 p-8 rounded-sm shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="space-y-2 text-center md:text-left italic">
@@ -68,7 +64,6 @@
         </div>
     </section>
 
-    <!-- Módulo 2: Masaje Abdominal para Hipopresivos (Video Horizontal & Pautas) -->
     <section class="py-20 px-6 bg-[#f7f5f0] border-b border-stone-200">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12 italic">
@@ -81,7 +76,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-10 items-center">
-                <!-- Video de YouTube Horizontal (Formato Estándar 16:9) -->
                 <div class="w-full aspect-video bg-black rounded-lg shadow-2xl overflow-hidden border-2 border-stone-300 relative">
                     <iframe 
                         src="https://www.youtube.com/embed/WreSZ1VaxyE" 
@@ -93,13 +87,12 @@
                     </iframe>
                 </div>
 
-                <!-- Pautas del Masaje Abdominal -->
                 <div class="space-y-6 italic text-stone-700 text-sm leading-relaxed">
                     <div class="bg-white p-6 border-l-4 border-cyan-700 shadow-sm space-y-3">
                         <h3 class="text-base font-bold text-stone-900 uppercase not-italic">Indicaciones Fundamentales:</h3>
                         <p>• <strong>Finalidad:</strong> Prepara la región abdominal relajando la musculatura profunda y la fascia previa o posteriormente a la práctica hipopresiva.</p>
                         <p>• <strong>Momento de aplicación:</strong> Se puede realizar tanto <em>antes</em> del entrenamiento para ganar movilidad diafragmática, como <em>post-práctica</em> para favorecer la relajación.</p>
-                        <p>• <strong>Uso de Aceites:</strong> Es highly recomendable utilizar aceites vegetales o esenciales para mejorar el deslizamiento de las manos y potenciar el efecto descontracturante.</p>
+                        <p>• <strong>Uso de Aceites:</strong> Es altamente recomendable utilizar aceites vegetales o esenciales para mejorar el deslizamiento de las manos y potenciar el efecto descontracturante.</p>
                     </div>
 
                     <div class="bg-amber-50 p-6 border border-amber-200 rounded-sm text-amber-900 space-y-2">
@@ -115,24 +108,22 @@
         </div>
     </section>
 
-    <!-- Módulo 3: Práctica Guiada de Inicio (Video Vertical 9:16 & Pautas) -->
     <section class="py-20 px-6 bg-[#fdfbf9] border-b border-stone-200">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12 italic">
                 <p class="text-cyan-700 text-xs font-bold uppercase tracking-[0.4em] mb-2">Entrenamiento Autoguiado para Alumnas</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 uppercase">Práctica 01 · Bases</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-900 uppercase">Librería de Prácticas</h2>
                 <div class="w-16 h-px bg-cyan-700 mx-auto my-4"></div>
                 <p class="text-stone-600 text-sm max-w-2xl mx-auto">
-                    Complementá nuestros encuentros presenciales de los sábados repitiendo esta rutina guiada de 10 minutos durante la semana.
+                    Complementá nuestros encuentros presenciales de los sábados repitiendo estas rutinas guiadas de 10 minutos durante la semana.
                 </p>
             </div>
 
-            <div class="bg-white border border-stone-200 p-6 md:p-10 rounded-sm shadow-xl grid md:grid-cols-2 gap-10 items-center">
-                <!-- Video YouTube (Formato Vertical 9:16 para Celular) -->
+            <div class="bg-white border border-stone-200 p-6 md:p-10 rounded-sm shadow-xl grid md:grid-cols-2 gap-10 items-center mb-12">
                 <div class="w-full max-w-xs mx-auto aspect-[9/16] bg-stone-100 rounded-lg overflow-hidden shadow-2xl border-2 border-stone-300 relative">
                     <iframe 
                         class="w-full h-full" 
-                        src="https://www.youtube.com/embed/k1exnSApjy0?si=S5kDrATQP9neK7fC" 
+                        src="https://www.youtube.com/embed/k1exnSApjy0" 
                         title="PRÁCTICA 01 · BASES - Técnicas Hipopresivas" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -140,13 +131,12 @@
                     </iframe>
                 </div>
 
-                <!-- Detalles e Instrucciones de la Práctica -->
                 <div class="italic text-stone-700 space-y-6">
                     <div>
                         <span class="bg-cyan-100 text-cyan-800 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-cyan-300">
                             10 Minutos de Práctica Guiada
                         </span>
-                        <h3 class="text-2xl font-bold text-stone-900 uppercase mt-3">Repasar las Bases</h3>
+                        <h3 class="text-2xl font-bold text-stone-900 uppercase mt-3">Práctica 01 · Bases</h3>
                         <p class="text-xs text-stone-500 mt-1">Ideal para incorporar el hábito de práctica semanal en tu hogar.</p>
                     </div>
 
@@ -175,13 +165,59 @@
                     </div>
                 </div>
             </div>
+
+            <div class="bg-white border border-stone-200 p-6 md:p-10 rounded-sm shadow-xl grid md:grid-cols-2 gap-10 items-center">
+                <div class="w-full max-w-xs mx-auto aspect-[9/16] bg-stone-100 rounded-lg overflow-hidden shadow-2xl border-2 border-stone-300 relative">
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube.com/embed/4ri3QIyRrJU" 
+                        title="PRÁCTICA 02 · 10 Minutos de Práctica Guiada - Técnicas Hipopresivas" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="italic text-stone-700 space-y-6">
+                    <div>
+                        <span class="bg-cyan-100 text-cyan-800 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-cyan-300">
+                            10 Minutos de Práctica Guiada
+                        </span>
+                        <h3 class="text-2xl font-bold text-stone-900 uppercase mt-3">Práctica 02 · Integración</h3>
+                        <p class="text-xs text-stone-500 mt-1">Consolidar lo aprendido y ganar mayor autonomía semanal.</p>
+                    </div>
+
+                    <div class="bg-stone-50 p-5 border-l-4 border-cyan-700 space-y-2">
+                        <p class="text-xs uppercase font-bold text-stone-800 tracking-wider">Recorrido de 4 Posturas:</p>
+                        <p class="text-base font-bold text-cyan-800">Aries → Taurus → Virgo → Piscis</p>
+                        <p class="text-xs text-stone-600 leading-relaxed">
+                            Integración de las posturas trabajadas en clase, manteniendo el foco en las pautas posturales, la respiración y la apertura costal.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <p class="font-bold text-stone-900 text-sm flex items-center gap-2 not-italic">
+                            💫 ¿En qué enfocarte?
+                        </p>
+                        <p class="text-xs text-stone-600 leading-relaxed">
+                            En esta práctica vamos a integrar algunas de las posturas trabajadas en clase, manteniendo el foco en las pautas posturales, la respiración y la apertura costal. El objetivo es consolidar lo aprendido y empezar a ganar mayor autonomía en una práctica breve que puedan repetir durante la semana.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-stone-200">
+                        <p class="text-stone-900 font-bold text-sm">10 minutos también cuentan.</p>
+                        <p class="text-xs text-stone-600 mb-3">La constancia es parte del aprendizaje. 💫</p>
+                        <p class="text-cyan-800 font-bold text-base">Naty</p>
+                        <p class="text-[9px] uppercase tracking-widest text-stone-400 font-bold">Instructora Certificada en Técnicas Hipopresivas</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Módulo 4: Desglose Completo de la Guía Digital (Lectura en Web) -->
     <main class="py-20 px-6 max-w-4xl mx-auto space-y-16">
         
-        <!-- Presentación -->
         <section class="bg-white p-8 md:p-12 border border-stone-200 shadow-xl space-y-6 italic">
             <p class="text-cyan-700 text-xs font-bold uppercase tracking-[0.4em]">Bienvenida al Programa</p>
             <h2 class="text-2xl md:text-3xl font-bold text-stone-900 uppercase">Aprender a Sentir tu Cuerpo</h2>
@@ -194,7 +230,6 @@
             </p>
         </section>
 
-        <!-- ¿Qué son los Hipopresivos? -->
         <section class="space-y-6 italic">
             <h2 class="text-2xl font-bold text-stone-900 uppercase border-b border-stone-200 pb-3">1. ¿Qué son los Hipopresivos?</h2>
             <p class="text-stone-700 leading-relaxed">
@@ -208,7 +243,6 @@
             </blockquote>
         </section>
 
-        <!-- Beneficios -->
         <section class="space-y-6 italic">
             <h2 class="text-2xl font-bold text-stone-900 uppercase border-b border-stone-200 pb-3">2. Beneficios de la Práctica Regular</h2>
             
@@ -244,7 +278,6 @@
             </div>
         </section>
 
-        <!-- Pautas Posturales -->
         <section class="space-y-6 italic">
             <h2 class="text-2xl font-bold text-stone-900 uppercase border-b border-stone-200 pb-3">3. Pautas Posturales Paso a Paso</h2>
             <p class="text-stone-600 text-sm">Se organizan de abajo hacia arriba, comenzando desde la base del cuerpo:</p>
@@ -260,7 +293,6 @@
             </ul>
         </section>
 
-        <!-- Pautas Respiratorias & Apnea -->
         <section class="space-y-6 italic">
             <h2 class="text-2xl font-bold text-stone-900 uppercase border-b border-stone-200 pb-3">4. Respiración Costal & Apnea Espiratoria</h2>
             
@@ -279,7 +311,6 @@
             </div>
         </section>
 
-        <!-- La Constancia -->
         <section class="bg-stone-900 text-white p-8 md:p-12 text-center space-y-4 italic shadow-2xl">
             <p class="text-cyan-400 text-xs font-bold uppercase tracking-[0.4em]">Filosofía Espacio INYO</p>
             <h2 class="text-2xl font-bold uppercase text-white">Conectar • Corregir • Avanzar</h2>
@@ -290,7 +321,6 @@
 
     </main>
 
-    <!-- Footer Institucional Espacio INYO -->
     <footer class="py-16 px-6 bg-[#1c1917] text-center text-white border-t border-stone-800 italic">
         <h2 class="text-3xl mb-4 italic uppercase font-bold text-white">Espacio INYO ☯️</h2>
         <p class="text-stone-400 text-xs mb-6">Acompañamiento Terapéutico & Formación Corporal • Sede Lanús Oeste Centro</p>
