@@ -47,16 +47,16 @@
             <div>
                 <p class="text-cyan-400 text-[10px] uppercase font-bold tracking-[0.4em] mb-1 italic">Área Privada</p>
                 <h1 class="text-2xl font-bold text-white uppercase italic tracking-tight">Acceso a Alumnas</h1>
-                <p class="text-stone-300 text-xs italic mt-2">Ingresá la clave provista por Espacio INYO para desbloquear el material de estudio.</p>
+                <p class="text-stone-300 text-xs italic mt-2">Ingresá tu clave personal provista por Espacio INYO para desbloquear el material de estudio.</p>
             </div>
 
             <form onsubmit="verificarClave(event)" class="space-y-4 pt-2">
                 <div>
-                    <input type="password" id="clave-input" placeholder="Ingresá tu clave aquí..." class="w-full bg-slate-900/80 text-white placeholder-stone-500 text-sm p-4 border border-stone-700 rounded-sm focus:outline-none focus:border-cyan-500 text-center tracking-widest">
+                    <input type="text" id="clave-input" placeholder="Ingresá tu clave personal..." autocapitalize="none" autocorrect="off" class="w-full bg-slate-900/80 text-white placeholder-stone-500 text-sm p-4 border border-stone-700 rounded-sm focus:outline-none focus:border-cyan-500 text-center tracking-widest">
                 </div>
 
                 <div id="error-msg" class="hidden text-red-400 text-xs italic font-bold bg-red-950/40 p-3 border border-red-800/50 rounded-sm">
-                    ⚠️ Clave incorrecta. Por favor volvé a intentarlo o consultanos por WhatsApp.
+                    ⚠️ Clave incorrecta o inactiva. Por favor volvé a intentarlo o consultanos por WhatsApp.
                 </div>
 
                 <button type="submit" class="w-full bg-cyan-700 hover:bg-cyan-800 text-white py-4 text-xs font-bold uppercase tracking-widest transition italic shadow-lg border border-cyan-500/40">
@@ -65,7 +65,7 @@
             </form>
 
             <div class="pt-4 border-t border-white/10 text-[11px] text-stone-400 italic">
-                ¿No recordás la clave? <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Soy%20alumna%20de%20Hipopresivos%20y%20necesito%20la%20clave%20de%20acceso." target="_blank" class="text-cyan-300 underline underline-offset-4 hover:text-white">Consultar por WhatsApp</a>
+                ¿No recordás tu clave personal? <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20Soy%20alumna%20de%20Hipopresivos%20y%20necesito%20mi%20clave%20de%20acceso%20personal." target="_blank" class="text-cyan-300 underline underline-offset-4 hover:text-white">Consultar por WhatsApp</a>
             </div>
 
         </div>
@@ -79,11 +79,29 @@
     <script>
         function verificarClave(e) {
             e.preventDefault();
-            const input = document.getElementById('clave-input').value.trim();
+            let input = document.getElementById('clave-input').value.trim().toLowerCase();
             const errorMsg = document.getElementById('error-msg');
 
-            // Clave configurada de acceso para alumnas
-            if (input === 'HIPO2026' || input === 'hipo2026' || input === 'inyo2026') {
+            // Normalización automática (eliminar tildes y acentos)
+            input = input.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+            // Lista de llaves de acceso personales autorizadas (Septiembre 2026)
+            const alumnasAutorizadas = [
+                'natalia.basoalto01',
+                'belen.rullio05',
+                'ernesto.matsushita06',
+                'mariana.salguero07',
+                'beatriz.leguizamon08',
+                'mariano.montini09',
+                'espacio.inyo10',
+                'sandra.gallegos11',
+                'antonela.binelli12',
+                'gabriela.ojeda13',
+                'analia.rodriguez14',
+                'claudia.garcia15'
+            ];
+
+            if (alumnasAutorizadas.includes(input)) {
                 sessionStorage.setItem('alumna_hipo_auth', 'true');
                 window.location.href = 'guia-alumnas.html';
             } else {
