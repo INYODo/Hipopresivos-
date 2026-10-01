@@ -53,6 +53,26 @@
 </head>
 <body class="antialiased">
 
+    <!-- BADGE FLOTANTE DE PRÓXIMA CLASE INTRODUCTORIA (NO INVASIVO) -->
+    <div id="floatingHipoBadge" class="fixed bottom-28 left-6 z-50 max-w-[290px] sm:max-w-xs bg-slate-900/95 backdrop-blur-md text-white p-5 rounded-2xl shadow-2xl border border-cyan-500/40 transition-all duration-500 transform hover:scale-[1.02]">
+        <button onclick="document.getElementById('floatingHipoBadge').style.display='none'" class="absolute top-3 right-3 text-stone-400 hover:text-white transition-colors text-xs p-1" title="Cerrar">
+            <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+        <div class="flex items-center gap-2 mb-2">
+            <span class="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></span>
+            <span class="text-[10px] uppercase tracking-[0.25em] text-cyan-300 font-bold italic">Próxima Clase Introductoria</span>
+        </div>
+        <h4 class="brand-font text-lg text-white font-bold mb-1 leading-snug">Técnicas Hipopresivas</h4>
+        <div class="space-y-1 text-xs text-stone-300 italic mb-4 border-l-2 border-cyan-500 pl-3">
+            <p><strong class="text-white not-italic">Sábado 3 de Octubre</strong></p>
+            <p><span class="text-stone-400">Horario:</span> 9:00 a 11:00 hs</p>
+            <p class="text-[11px] text-stone-300 mt-1 not-italic">🧘 Taller de Inicio + Prácticas con Naty Basoalto.</p>
+        </div>
+        <a href="#programa" onclick="document.getElementById('floatingHipoBadge').style.display='none'" class="block w-full text-center bg-cyan-700 text-white py-2.5 px-4 rounded-xl text-[10px] uppercase font-bold tracking-widest hover:bg-cyan-800 transition-colors duration-300 italic shadow-sm border border-cyan-500/50">
+            Ver Programa & Reservar
+        </a>
+    </div>
+
     <!-- Reproductor de Audio Flotante -->
     <div id="zen-control" class="music-btn-zen" onclick="toggleZenMusic()" title="Música Zen Hipopresivos">
         <i id="zen-icon" class="fas fa-wind text-lg"></i>
